@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+                * {box-sizing: border-box;}
+                body {font-family: Verdana, sans-serif;}
+                .mySlides {display: none;}
+                img {vertical-align: middle;}
+                
+                /* Slideshow container */
+                .slideshow-container {
+                    max-width: 1000px;
+                    position: relative;
+                    margin: auto;
+                    
+                }
+            
+            /* Caption text */
+            .text {
+                color: #f2f2f2;
+                font-size: 15px;
+                padding: 8px 12px;
+                position: absolute;
+                bottom: 8px;
+                width: 100%;
+                text-align: center;
+            }
+            
+            /* Number text (1/3 etc) */
+            .numbertext {
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+            }
+            
+            /* The dots/bullets/indicators */
+            .dot {
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+            
+            .active {
+                /*background-color: #717171;
+            */
+                background-color: lightpink;
+                 }
+            
+            /* Fading animation */
+            .fade {
+                -webkit-animation-name: fade;
+                -webkit-animation-duration: 1.5s;
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+            
+            @-webkit-keyframes fade {
+                from {opacity: .4}
+                to {opacity: 1}
+            }
+            
+            @keyframes fade {
+                from {opacity: .4}
+                to {opacity: 1}
+            }
+            
+            /* On smaller screens, decrease text size */
+            @media only screen and (max-width: 300px) {
+                .text {font-size: 11px}
+            }
+            </style>
+    </head>
+    
+    <body>
+        
+        <h2>Teken 4</h2>
+        <p></p>
+        
+        <div class="slideshow-container">
+            
+            <div class="mySlides slide">
+                <div class="numbertext">1 / 5</div>
+                <img src="Fantasy-Soccer.png" style="width:100%">
+                    <div class="text"></div>
+            </div>
+            
+            <div class="mySlides slide">
+                <div class="numbertext">2 / 5</div>
+                <img src="league_one.jpeg" style="width:100%">
+                    <div class="text"></div>
+            </div>
+            
+            <div class="mySlides slide">
+                <div class="numbertext">3 / 5</div>
+                <img src="bundesliga.png" style="width:100%">
+                    <div class="text"></div>
+            </div>
+            <div class="mySlides slide">
+                <div class="numbertext">4 / 5</div>
+                <img src="Serie-A.jpg" style="width:100%">
+                    <div class="text"></div>
+                    </div>
+            <div class="mySlides slide">
+                <div class="numbertext">5 / 5</div>
+                <img src="liga.png" style="width:100%">
+                    <div class="text"></div>
+                    </div>
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        
+    
+        <script>
+            var slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+        </script>
+        
+        <body class="w3-light-black">
+            <div class="w3-top">
+                <nav class="navbar navbar-expand-lg navbar-black bg-light">
+                    <a class="navbar-brand" href="">Teken 4</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </nav>
+            </div>
+            <div class="w3-container w3-padding-64 w3-pale-blue w3-center w3-wide" id="login">
+                <h1>Login or Register</h1>
+                <p class="w3-xlarge">
+                <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-blue w3-opacity w3-hover-opacity-off" style="padding:10px 60px"><h1>Login</h1></button>
+                </p>
+            
+            <!-- login model -->
+            <div id="id01" class="w3-modal" "w3-black"">
+               <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:32px;max-width:600px">
+	          <header class="w3-container">
+		     <span onclick="document.getElementById('id01').style.display='none'"class="w3-button w3-display-topright">&times;</span>
+                    <div class="w3-container w3-white w3-center">
+                        <h1 class="w3-wide">Login</h1>
+                      <!--  <p>We really hope you can make it.</p>-->
+                            <form method = "post" action="../490_authsys/login_auth.php">
+                            <input class="w3-input w3-border" type="text" placeholder="User Name" name="usrName">
+                            <input class="w3-input w3-border" type="password" placeholder="Password" name="usrPassword">
+			    <input type="submit" name="loginButton" value="Login">
+			    </form>
+			   
+			    <p><i><a href="resetPassword.php" targer="_blank" class="w3-hover-text-green"> Forgot password</a></i> <br>
+
+				    </p>
+				      
+                                     
+				   
+                                        </div>
+                                        </div>
+ 				    </div>           
+
+            <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-round w3-blue w3-opacity w3-hover-opacity-off" style="padding:10px 60px"><h1>Registration</h1></button>
+            </p>
+            </div>
+            <!-- login model -->
+            <div id="id02" class="w3-modal""w3-black">
+                <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:32px;max-width:600px">
+                      <header class="w3-container">
+		         <span onclick="document.getElementById('id02').style.display='none'"class="w3-button w3-display-topright">&times;</span> 
+		    <div class="w3-container w3-white w3-center">
+                        <h1 class="w3-wide">Register</h1>
+                        <!--  <p>We really hope you can make it.</p>-->
+                            <form method = "post" action="../490_authsys/register_auth.php">
+                                <input class="w3-input w3-border" type="text" placeholder="User Name" name="usrName">
+                                    <input class="w3-input w3-border" type="password" placeholder="Password" name="usrPassword">
+                                        <input class="w3-input w3-border" type="text" placeholder="Email" name="usrEmail">
+                                            <input type="submit" name="createButton" value="Create Account">
+                                            </form>
+                            <p><i>Thank you for Registering in.</i></p>
+			</div>
+		  </div>
+            </div>
+        <style>
+            
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: red;
+                color: white;
+                text-align: center;
+            }
+        </style>
+        <!-- Footer -->
+        <br>
+        
+        <br>
+        <footer class="w3-center-align w3-black w3-padding-16">
+            <p>&copy; <a href="" target="_blank" class="w3-hover-text-green">Simranjeet Tuhaid Andre Lionel </a> | New Jersey Institute of Technology</p> </footer>
+        <!-- End page content -->
+        </div>
+        
+        <!--JAVASCRIPT-->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script> // Accordion
+            function myFunction(id) {
+                var x = document.getElementById(id);
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                    x.previousElementSibling.className += " w3-theme-d1";
+                } else {
+                    x.className = x.className.replace("w3-show", "");
+                    x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+                }
+            }
+        </script>
+        
+        
+    </body>
+</html>
